@@ -1,0 +1,236 @@
+.contact-main {
+    width: 1300px;
+    margin: auto;
+    background-color: #F7F7F7;
+    margin-top: 165px;
+    padding-bottom: 270px;
+    margin-bottom: 220px;
+}
+.con-header {
+    text-align: center;
+    padding: 53px 0;
+}
+
+.con-header>div:first-child {
+    font-size: 30px;
+    position: relative;
+    margin-bottom: 70px;
+}
+
+.con-header>div:first-child:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 61px;
+    height: 3px;
+    background-color: #00A7FF;
+    bottom: -35px;
+}
+.con-header>div:last-child {
+    font-size: 16px;
+    line-height: 2.5;
+}
+
+.con-main {
+    width: 730px;
+    padding-bottom: 192px;
+    padding-top: 100px;
+    margin: auto;
+}
+.con-container {
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    font-size: 16px;
+    margin-bottom: 45px;
+}
+.con-container>div:first-child {
+    width: 31%;
+    position: relative;
+    padding-left: 27px;
+}
+.con-container>div:last-child {
+    width: 69%;
+}
+
+.con-container label {
+    display: inline-block;
+    margin-bottom: 18px;
+}
+
+.con-necessary::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 99px;
+    background-color: #1CA7FC;
+}
+
+.input-big input {
+    width: 100%;
+    height: 45px;
+    font-size: 16px;
+    padding: 14px 20px;
+}
+
+.input-small {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.input-small input {
+    width: 97%;
+    height: 45px;
+    font-size: 16px;
+    padding: 14px 20px;
+}
+.con-container textarea {
+    width: 100%;
+    font-size: 16px;
+    padding: 14px 20px;
+}
+.con-margin-big {
+    margin-bottom: 80px;
+}
+
+.con-container:nth-child(2), .con-container:nth-child(7) {
+    align-items: flex-start;
+}
+
+.submit-btn input {
+    width: 282px;
+    height: 62px;
+    display: block;
+    margin: auto;
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    text-align: center;
+    padding: 15px 0;
+    border-radius: 999px;
+    transition: .5s ease;
+    border: 2px solid black;
+}
+
+.submit-btn input:hover {
+    color: black;
+
+    background-color: white;
+}
+
+.con-phone {
+    font-size: 68px;
+    color: #00A7FF;
+    text-align: center;
+    line-height: 1;
+}
+
+.con-phone span {
+    font-size: 20px;
+    color: black;
+}
+
+@media (max-width: 1440px) {
+    .contact-main {
+        width: 90%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .con-main {
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .con-container {
+        display: block;
+        font-size: 28rem;
+        padding-bottom: 50rem;
+        margin-bottom: 40rem;
+        border-bottom: 1px solid #1CA7FC;
+    }
+    .con-container>div {
+        width: 100% !important;
+    }
+    .con-header>div:first-child {
+        font-size: 40rem;
+        margin-bottom: 80rem;
+    }
+    .con-header>div:last-child {
+        font-size: 28rem;
+    }
+    .con-container>div:first-child {
+        margin-bottom: 40rem;
+    }
+    .con-container:nth-child(6) {
+        border: none;
+    }
+    .input-big input, .input-small input {
+        height: 80rem;
+        font-size: 28rem;
+        padding: 14rem 20rem;
+    }
+
+    .con-container textarea {
+        font-size: 24rem;
+        padding: 14rem 20rem;
+    }
+    .con-phone {
+        font-size: 24px;
+    }
+    .con-phone span {
+        font-size: 30rem;
+		margin-right: 10px;
+    }
+
+    .submit-btn input {
+        width: 282rem;
+        height: 75rem;
+        font-size: 28rem;
+        padding: 11rem;
+        margin-top: 90rem;
+    }
+
+    .con-container label {
+        margin-bottom: 18rem;
+    }
+
+    .con-container label:last-child {
+        margin-bottom: 0;
+    }
+    .contact-main {
+        padding-bottom: 170rem;
+        margin-bottom: 120rem;
+        margin-top: 100rem;
+    }
+
+    .con-main {
+        padding:0 0 100rem 0;
+    }
+    .con-header>div:first-child:after {
+        bottom: -35rem;
+    }
+    .con-necessary::after {
+        width: 16rem;
+        height: 16rem;
+    }
+    .con-container>div:first-child {
+        padding-left: 27rem;
+    }
+    .wpcf7-list-item-label {
+        margin-bottom: 20rem;
+        display: inline-block;
+        font-size: 28rem;
+    }
+}
+
+.wpcf7-list-item {
+    display: block;
+}

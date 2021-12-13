@@ -1,0 +1,133 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap');
+main {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 400;
+}
+
+.banner>img {
+    width: 100%;
+    height: auto;
+}
+
+
+.banner-white-back {
+    background-color: white;
+    width: 63%;
+    height: 238px;
+    margin-top: -119px;
+    position: relative;
+}
+.page-title {
+    padding-left: 220px;
+    padding-top: 90px;
+}
+.page-title span:first-child {
+    position: relative;
+    font-size: 35px;
+    letter-spacing: .2em;
+    z-index: 2;
+}
+.page-title span:last-child {
+    font-size: 117px;
+    color: #B7E6FF;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 37%;
+    white-space: nowrap;
+}
+
+.page-path {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+    top: -104px;
+}
+
+.page-path>span {
+    display: block;
+}
+
+.page-path>img {
+    margin: 0 30px 5px 30px;
+}
+
+.banner-bottom {
+    position: relative;
+}
+
+
+.header-mail-btn:hover img:nth-child(2) {
+    display: block !important;
+}
+.header-mail-btn:hover img:nth-child(1) {
+    display: none !important;
+}
+
+@media (max-width: 1200px) {
+    .page-title {
+        padding-left: 10%;
+        padding-top: 30px;
+    }
+    .banner-white-back {
+        height: 179px;
+        margin-top: -89px;
+    }
+    .page-title span:last-child {
+        font-size: 87px;
+        left: 10%;
+        bottom: 20%;
+    }
+    .page-title span:first-child {
+        font-size: 25px;
+    }
+    .page-path {
+        top: -80px;
+    }
+
+
+}
+._sp {
+    display: none;
+}
+@media (max-width: 768px) {
+    ._pc {
+        display: none;
+    }
+    ._sp {
+        display: block;
+    }
+    .banner>img {
+        height: 70vh;
+        object-fit: cover;
+    }
+    .banner-white-back {
+        height: 170rem;
+        margin-top: -7vh;
+        width: 100%;
+    }
+    .page-title {
+        padding-left: 10%;
+        padding-top: 60rem;
+        
+    }
+    .page-title span:first-child {
+        font-size: 35rem;
+    }
+    .page-title span:last-child {
+        font-size: 90rem;
+        bottom: 20%;
+    }
+    .page-path {
+        font-size: 24rem;
+        top: -156rem;
+        right: 25rem;
+    }
+    .page-path>img {
+        width: 33rem;
+        margin: 0 30rem 5rem 30rem;
+    }
+}

@@ -1,0 +1,1696 @@
+/*! tailwindcss v2.2.7 | MIT License | https://tailwindcss.com */
+
+/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+
+/*
+Document
+========
+*/
+
+/**
+Use a better box model (opinionated).
+*/
+
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap');
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+/**
+Use a more readable tab size (opinionated).
+*/
+
+html {
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+}
+
+/**
+1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+*/
+
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/*
+Sections
+========
+*/
+
+/**
+Remove the margin in all browsers.
+*/
+
+body {
+  margin: 0;
+}
+
+/**
+Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+*/
+
+body {
+  font-family: system-ui, -apple-system, /* Firefox supports this but not yet `system-ui` */
+  'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+
+/*
+Grouping content
+================
+*/
+
+/**
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+}
+
+/*
+Text-level semantics
+====================
+*/
+
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+
+b, strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+
+code, kbd, samp, pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+
+/**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+}
+
+/*
+Forms
+=====
+*/
+
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+1. Remove the inheritance of text transform in Firefox.
+*/
+
+button, select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+
+button, [type='button'], [type='reset'], [type='submit'] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the inner border and padding in Firefox.
+*/
+
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+Restore the focus styles unset by the previous rule.
+*/
+
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+Remove the additional ':invalid' styles in Firefox.
+See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/**
+ * Manually forked from SUIT CSS Base: https://github.com/suitcss/base
+ * A thin layer on top of normalize.css that provides a starting point more
+ * suitable for web applications.
+ */
+
+/**
+ * Removes the default spacing and border for appropriate elements.
+ */
+
+blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
+  margin: 0;
+}
+
+button {
+  background-color: transparent;
+  background-image: none;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Tailwind custom reset styles
+ */
+
+/**
+ * 1. Use the user's configured `sans` font-family (with Tailwind's default
+ *    sans-serif font stack as a fallback) as a sane default.
+ * 2. Use Tailwind's default "normal" line-height so the user isn't forced
+ *    to override it to ensure consistency even when using the default theme.
+ */
+
+html {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 1 */
+  line-height: 1.5;
+  /* 2 */
+}
+
+/**
+ * Inherit font-family and line-height from `html` so users can set them as
+ * a class directly on the `html` element.
+ */
+
+body {
+  font-family: inherit;
+  line-height: inherit;
+}
+
+/**
+ * 1. Prevent padding and border from affecting element width.
+ *
+ *    We used to set this in the html element and inherit from
+ *    the parent element for everything else. This caused issues
+ *    in shadow-dom-enhanced elements like <details> where the content
+ *    is wrapped by a div with box-sizing set to `content-box`.
+ *
+ *    https://github.com/mozdevs/cssremedy/issues/4
+ *
+ *
+ * 2. Allow adding a border to an element by just adding a border-width.
+ *
+ *    By default, the way the browser specifies that an element should have no
+ *    border is by setting it's border-style to `none` in the user-agent
+ *    stylesheet.
+ *
+ *    In order to easily add borders to elements by just setting the `border-width`
+ *    property, we change the default border-style for all elements to `solid`, and
+ *    use border-width to hide them instead. This way our `border` utilities only
+ *    need to set the `border-width` property instead of the entire `border`
+ *    shorthand, making our border utilities much more straightforward to compose.
+ *
+ *    https://github.com/tailwindcss/tailwindcss/pull/116
+ */
+
+*, ::before, ::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: currentColor;
+  /* 2 */
+}
+
+/*
+ * Ensure horizontal rules are visible by default
+ */
+
+hr {
+  border-top-width: 1px;
+}
+
+/**
+ * Undo the `border-style: none` reset that Normalize applies to images so that
+ * our `border-{width}` utilities have the expected effect.
+ *
+ * The Normalize reset is unnecessary for us since we default the border-width
+ * to 0 on all elements.
+ *
+ * https://github.com/tailwindcss/tailwindcss/issues/362
+ */
+
+img {
+  border-style: solid;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+input::placeholder, textarea::placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+button, [role="button"] {
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/**
+ * Reset links to optimize for opt-in styling instead of
+ * opt-out.
+ */
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/**
+ * Reset form element properties that are easy to forget to
+ * style explicitly so you don't inadvertently introduce
+ * styles that deviate from your design system. These styles
+ * supplement a partial reset that is already applied by
+ * normalize.css.
+ */
+
+button, input, optgroup, select, textarea {
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+}
+
+/**
+ * Use the configured 'mono' font family for elements that
+ * are expected to be rendered with a monospace font, falling
+ * back to the system monospace stack if there is no configured
+ * 'mono' font family.
+ */
+
+pre, code, kbd, samp {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/**
+ * 1. Make replaced elements `display: block` by default as that's
+ *    the behavior you want almost all of the time. Inspired by
+ *    CSS Remedy, with `svg` added as well.
+ *
+ *    https://github.com/mozdevs/cssremedy/issues/14
+ * 
+ * 2. Add `vertical-align: middle` to align replaced elements more
+ *    sensibly by default when overriding `display` by adding a
+ *    utility like `inline`.
+ *
+ *    This can trigger a poorly considered linting error in some
+ *    tools but is included by design.
+ * 
+ *    https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210
+ */
+
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/**
+ * Constrain images and videos to the parent width and preserve
+ * their intrinsic aspect ratio.
+ *
+ * https://github.com/mozdevs/cssremedy/issues/14
+ */
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+ * Ensure the default browser behavior of the `hidden` attribute.
+ */
+
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+  --tw-border-opacity: 1;
+  border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+}
+
+.container {
+  width: 100%;
+}
+
+@font-face {
+  font-family: 'hiragino-w4';
+  src: url('../fonts/HiraginoSansW4.otf');
+}
+
+@font-face {
+  font-family: 'myanmar-regular';
+  src: url('../fonts/NotoSerifMyanmar-Regular (1).ttf');
+}
+
+@font-face {
+  font-family: 'slabo27px-regular';
+  src: url('../fonts/Slabo27px-Regular.ttf');
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.hidden {
+  display: none;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-solid {
+  border-style: solid;
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgba(255, 255, 255, var(--tw-border-opacity));
+}
+
+.bg-blue {
+  --tw-bg-opacity: 1;
+  background-color: rgba(0, 167, 255, var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.font-myanmar-regular {
+  /* font-family: myanmar-regular; */
+  font-family: 'Shippori Mincho B1', serif;
+}
+
+.font-hiragino-w4 {
+  font-family: hiragino-w4;
+}
+
+.not-italic {
+  font-style: normal;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.text-blue {
+  --tw-text-opacity: 1;
+  color: rgba(0, 167, 255, var(--tw-text-opacity));
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+html {
+  font-size: calc(100vw / 1440);
+}
+
+body {
+  font-size: 16rem;
+}
+
+.content-wrap {
+  width: 1200px;
+  margin: auto;
+}
+
+/* header begin */
+
+
+/* header end */
+
+/* hero begin */
+
+.hero-swiper-container {
+  /* background: #003978; */
+  margin-top: -593px;
+}
+
+.hero-swiper-container .swiper-wrapper .swiper-slide {
+  transition: opacity .4s ease-out;
+  pointer-events: none;
+}
+
+.hero-swiper-container .swiper-wrapper .swiper-slide .swiper-img {
+  height: 595px;
+  background-size: cover;
+  transition: transform 2s cubic-bezier(1, 0, 1, 0);
+  background-position: right center;
+  background-repeat: no-repeat;
+  transform: scale(1.15);
+  will-change: transform;
+}
+
+.hero-swiper-container .swiper-wrapper .swiper-slide .swiper-img-01 {
+  background-image: url(../image/bg_hero_01.png);
+}
+
+.hero-swiper-container .swiper-wrapper .swiper-slide .swiper-img-02 {
+  background-image: url(../image/bg_hero_02.jpg);
+}
+
+.hero-swiper-container .swiper-wrapper .swiper-slide .swiper-img-03 {
+  background-image: url(../image/bg_hero_03.jpg);
+}
+
+.hero-swiper-container .swiper-wrapper .swiper-slide-active .swiper-img, .hero-swiper-container .swiper-wrapper .swiper-slide-duplicate-active .swiper-img, .hero-swiper-container .swiper-wrapper .swiper-slide-prev .swiper-img {
+  transition: transform 10s linear;
+  transform: scale(1);
+}
+
+.l-hero {
+  padding-bottom: 250px;
+  position: fixed;
+  width: 100%;
+  /* height: 500px; */
+  z-index: 1;
+}
+
+.l-hero .content-wrap {
+  height: 593px;
+}
+
+.l-hero h1 {
+  font-size: 75px;
+  line-height: 120px;
+  left: 0;
+  bottom: -140px;
+}
+
+.l-hero .swiper-pagination {
+  top: 730px;
+}
+
+.l-hero .swiper-pagination .swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #000;
+  opacity: .2;
+  margin: 0 11px;
+}
+
+.l-hero .swiper-pagination .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #00A7FF;
+}
+
+.l-hero .scroll-down {
+  bottom: -120px;
+  right: 140px;
+}
+
+/* hero end */
+
+/* company begin */
+
+.l-company {
+  background-image: url(../image/bg_company.png);
+  padding: 53px 0 72px 0;
+  background-position: right center;
+}
+
+.l-company h1 {
+  font-size: 30px;
+  letter-spacing: 0.2em;
+}
+
+.l-company .company-ttl-img {
+  top: -88px;
+  right: 53px;
+  width: 772px;
+}
+
+.l-company .company-line {
+  width: 61.13px;
+  height: 0px;
+  background: transparent;
+  border-bottom: 3px solid #00a7ff;
+}
+
+.l-company p {
+  font-size: 17px;
+  letter-spacing: 0.1em;
+  line-height: 60px;
+  margin-top: 71.5px;
+}
+
+/*== ボタン共通設定 */
+
+.l-company .company-btn {
+  background-color: #00A7FF;
+  font-size: 17px;
+  letter-spacing: 0.1em;
+  padding: 30px 23px 30px 47px;
+  margin: 154px 0 0 200px;
+  border: 1px solid transparent;
+  /*アニメーションの指定*/
+  transition: ease .2s;
+}
+
+/*ボタン内spanの形状*/
+
+.l-company .company-btn span {
+  z-index: 3;
+  /*z-indexの数値をあげて文字を背景よりも手前に表示*/
+  color: #fff;
+}
+
+.l-company .company-btn:hover {
+  border: 1px solid #00A7FF;
+}
+
+.l-company .company-btn:hover span {
+  color: #00A7FF;
+}
+
+/*== 背景が流れる（斜め） */
+
+/* company end */
+
+/* business begin */
+
+.l-business {
+  padding-top: 139px;
+  position: relative;
+}
+
+.business-swiper-container {
+  background: #003978;
+}
+
+.business-swiper-container .swiper-wrapper-img .swiper-slide {
+  transition: opacity .4s ease-out;
+  pointer-events: none;
+}
+
+.business-swiper-container .swiper-wrapper-img .swiper-slide .swiper-img {
+  height: 467px;
+  background-size: cover;
+}
+
+.business-swiper-container .swiper-wrapper-img .swiper-slide .swiper-img-01 {
+  background-image: url(../image/bg_business_01.png);
+}
+
+.business-swiper-container .swiper-wrapper-img .swiper-slide .swiper-img-02 {
+  background-image: url(../image/bg_business_02.jpg);
+}
+
+.business-swiper-container .swiper-wrapper-img .swiper-slide .swiper-img-03 {
+  background-image: url(../image/bg_business_03.png);
+}
+
+.business-swiper-container .swiper-wrapper-img .swiper-slide .swiper-img-04 {
+  background-image: url(../image/bg_business_04.jpg);
+}
+
+.business-swiper-container .swiper-wrapper-img .swiper-slide .swiper-img-05 {
+  background-image: url(../image/bg_business_05.png);
+}
+
+.business-swiper-container .swiper-wrapper-img .swiper-slide .swiper-img-06 {
+  background-image: url(../image/bg_business_06.jpg);
+}
+
+.business-swiper-container .swiper-wrapper-img .swiper-slide .swiper-img-07 {
+  background-image: url(../image/bg_business_07.png);
+}
+
+.business-swiper-container .swiper-button-prev-business, .business-swiper-container .swiper-button-next-business {
+  width: 207px;
+  height: 68px;
+  background: #00a7ff;
+  color: white;
+  font-size: 19px;
+  letter-spacing: 0.2em;
+  border: 0.5px solid #fff;
+}
+
+.business-swiper-container .swiper-button-next:after, .business-swiper-container .swiper-button-prev:after {
+  font-size: 19px;
+  font-family: 'hiragino-w4';
+  position: absolute;
+}
+
+.business-swiper-container .swiper-button-next-business {
+  right: 218rem;
+  top: 221px;
+}
+
+.business-swiper-container .swiper-button-next-business:after {
+  content: '>';
+  right: 36px;
+}
+
+.business-swiper-container .swiper-button-prev-business {
+  right: 218rem;
+  top: 288px;
+  left: unset;
+}
+
+.business-swiper-container .swiper-button-prev-business:after {
+  content: '<';
+  left: 36px;
+}
+
+.text-swiper-container {
+  width: 627px;
+  height: 272px;
+  background: #fff;
+  border: 1px solid #00a7ff;
+  margin-left: calc(100% - 218rem - 627px)!important;
+  margin-top: -134px;
+  z-index: 3 !important;
+}
+
+.text-swiper-container .swiper-wrapper-text .swiper-slide {
+  padding: 58px 0 0 89px;
+}
+
+.text-swiper-container .swiper-wrapper-text .swiper-slide h1 {
+  font-size: 26px;
+  font-family: 'hiragino-w4';
+  letter-spacing: 0.2em;
+}
+
+.text-swiper-container .swiper-wrapper-text .swiper-slide p {
+  font-size: 15px;
+  line-height: 40px;
+  font-family: 'Shippori Mincho B1', serif;
+  margin-top: 30px;
+}
+
+.swiper-pagination-text {
+  margin-left: calc(100% - 218rem - 627px - 3.15px)!important;
+  margin-top: 5px!important;
+}
+
+.swiper-pagination-text .swiper-pagination-bullet {
+  width: 55px;
+  height: 4px;
+  display: inline-block;
+  background: #707070;
+  border-radius: unset;
+  opacity: 1;
+  margin: 0 3.15px;
+}
+
+.swiper-pagination-text .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: #00A7FF;
+}
+
+/* business end */
+
+/* work begin */
+
+.l-work {
+  padding: 258px 0 77px 219rem;
+}
+
+.l-work h1 {
+  font-size: 30px;
+  letter-spacing: 0.2em;
+}
+
+.l-work .work-ttl-img {
+  bottom: 0rem;
+  left: 219rem;
+  width: 508rem;
+}
+
+.l-work .work-line {
+  width: 61px;
+  height: 0rem;
+  background: transparent;
+  border-bottom: 3px solid #00a7ff;
+}
+
+.l-work article .swiper-container-work {
+  width: 975rem;
+  margin-left: calc(100% - 975rem);
+  margin-right: unset;
+}
+
+.l-work article .swiper-container-work .swiper-wrapper-work .work-article figure img {
+  width: 100%;
+  height: 228px;
+  object-fit: cover;
+}
+
+.l-work article .swiper-container-work .swiper-wrapper-work .work-article-info {
+  margin: 18rem 0 12rem 0;
+}
+
+.l-work article .swiper-container-work .swiper-wrapper-work .work-article-info .work-article-category {
+  font-size: 15rem;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  padding: 5rem 7rem;
+  margin-right: 15rem;
+}
+
+.l-work article .swiper-container-work .swiper-wrapper-work .work-article-info .work-article-date {
+  font-size: 15rem;
+  letter-spacing: 0.1em;
+}
+
+.l-work article .swiper-container-work .swiper-wrapper-work .work-article-ttl {
+  font-size: 18rem;
+  letter-spacing: 0.1em;
+}
+
+.l-work article .swiper-button-prev-work, .l-work article .swiper-button-next-work {
+  width: 52rem;
+  height: 52rem;
+  background: #fff;
+  font-size: 19rem;
+  border-radius: 50%;
+}
+
+.l-work article .swiper-button-next-work {
+  right: 58rem;
+  top: 119rem;
+  color: #2abaaa;
+  border: 0.5rem solid #2abaaa;
+}
+
+.l-work article .swiper-button-next-work:after {
+  content: '';
+}
+
+.l-work article .swiper-button-prev-work {
+  top: 119rem;
+  left: 130rem;
+  color: #00a7ff;
+  border: 0.5rem solid #00a7ff;
+}
+
+.l-work article .swiper-button-prev-work:after {
+  content: '';
+}
+
+/* work end */
+
+/* info begin */
+
+.l-info {
+  padding: 180px 0 198px 0;
+}
+
+.l-info .content-wrap {
+  padding: 0 68px;
+}
+
+.l-info .info-main {
+  left: 0;
+  right: 0;
+  top: 95px;
+  margin: auto;
+  width: 321px;
+  height: 321px;
+}
+
+.l-info .info-main h1 {
+  font-size: 30px;
+  letter-spacing: 0.2em;
+  margin: 68px 0 23px 0;
+}
+
+.l-info .info-main p {
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  line-height: 35px;
+}
+
+.l-info .info-main a {
+  width: 258px;
+  height: 58px;
+  background: #fff;
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  padding-top: 18px;
+  margin-top: 27px;
+}
+
+.l-info .info-main a img {
+  top: 23.6px;
+  right: 26.6px;
+}
+
+/* info end */
+
+/* footer begin */
+
+
+/* footer end */
+
+.company-sub-back {
+  position: absolute;
+  width: 100%;
+  height: 223px;
+  background-color: rgba(0, 167, 255, 0.7);
+  color: white;
+  font-size: 30px;
+  padding: 90px 0;
+  bottom: 135px;
+  z-index: 2;
+  font-family: 'Shippori Mincho B1';
+}
+
+.business-swiper-container {
+  z-index: unset !important;
+}
+
+.l-work article img {
+  width: 9rem;
+}
+
+._sp {
+  display: none;
+}
+
+.footer-main .footer-info h1 span {
+  margin-left: 15px;
+}
+
+@media (max-width: 1300px) {
+  .content-wrap {
+    width: 1200rem;
+  }
+  .l-company .company-ttl-img {
+    top: -6.77vw;
+    right: 4.07vw;
+  }
+  .company-sub-back {
+    padding: 30px 90px;
+  }
+  .footer-contact-info {
+    padding: 96px 45px 0 0;
+  }
+
+  .l-work article .swiper-container-work .swiper-wrapper-work .work-article figure img {
+    height: 200rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .l-hero h1 {
+    font-size: 60px;
+  }
+  .contact-btn {
+    right: 25px;
+  }
+  .l-company .company-btn {
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .text-swiper-container {
+    width: 336px;
+    height: 254px;
+    margin-left: 65px;
+    transform: none;
+  }
+  .text-swiper-container .swiper-wrapper-text .swiper-slide {
+    padding: 63px 55px 0 32px;
+  }
+  .text-swiper-container .swiper-wrapper-text .swiper-slide h1 {
+    font-size: 21px;
+  }
+  .text-swiper-container .swiper-wrapper-text .swiper-slide p {
+    font-size: 14px;
+    line-height: 30px;
+  }
+  .swiper-pagination-text {
+    margin-left: 183px !important;
+    margin-top: 5px !important;
+  }
+  .text-swiper-container {
+    margin-left: 67px !important;
+    margin-top: -65px !important;
+  }
+  .swiper-pagination-text .swiper-pagination-bullet {
+    margin-top: 20px;
+  }
+  .l-business .swiper-pagination {
+    text-align: left;
+  }
+  .l-work article img {
+    width: 22rem;
+  }
+  .l-work article img {
+    width: 13px;
+  }
+  .l-work article .swiper-container-work .swiper-wrapper-work .work-article figure img {
+    height: 737rem;
+  }
+  .l-work article .swiper-button-prev-work, .l-work article .swiper-button-next-work {
+    width: 52px;
+    height: 52px;
+  }
+  .l-work article .swiper-button-prev-work {
+    display: none;
+  }
+  .l-work h1 {
+    font-size: 26px;
+  }
+  .l-work {
+    overflow: hidden;
+  }
+  .l-work .work-ttl-img {
+    top: 124px;
+    left: 75px;
+    width: 389px;
+  }
+  .l-work {
+    padding: 212px 0 200px 25px;
+  }
+  .l-work article .swiper-container-work {
+    width: 100%;
+    height: auto;
+    margin-left: 0 !important;
+    margin-top: 78px;
+  }
+  .l-work .work-line {
+    border-width: 2px;
+    margin-top: 30px;
+  }
+  .work-article-category {
+    width: 82px;
+    height: 32px;
+    font-size: 13px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .work-article-date {
+    font-size: 13px !important;
+    margin-left: 10px;
+  }
+  .work-article-ttl {
+    font-size: 16px !important;
+  }
+  .work-article-info {
+    display: flex;
+    align-items: center;
+    margin-top: 17px !important;
+  }
+  .l-work article .swiper-button-next-work {
+    top: 40%;
+    right: 5%;
+    border: 1px solid #2abaaa;
+  }
+  .l-info {
+    padding: 0 25px 411px 25px;
+  }
+  .l-info .content-wrap {
+    padding: 0;
+  }
+  .l-info .info-main {
+    width: 100%;
+    top: 155px;
+    font-family: 'hiragino-w4';
+    height: 247px;
+  }
+  .l-info .info-main h1 {
+    font-size: 25px;
+    margin-top: 26px;
+    margin-bottom: 5px;
+  }
+  .l-info .info-main p {
+    font-size: 14px;
+  }
+  .l-info .info-main a {
+    font-size: 14px;
+    width: 225px;
+    height: 51px;
+    padding-top: 15px;
+  }
+  .l-info .info-main a img {
+    top: 19.6px;
+  }
+  .footer-contact>div {
+    flex-direction: column;
+  }
+  .w-1\/2 {
+    width: 100%;
+  }
+  .footer-contact-info {
+    padding: 0 0 86px 0;
+  }
+  .footer-main {
+    padding: 83px 25px 64px 25px;
+  }
+  .footer-main>div {
+    flex-direction: column-reverse;
+  }
+  .footer-main .footer-menu {
+    padding: 0;
+  }
+  .footer-line._sp {
+    height: 1px;
+    background-color: #879CC9;
+    width: 100%;
+    margin: 65px 0 35px 0;
+    display: block;
+  }
+  .footer-main .footer-menu nav ul li {
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  .footer-bottom .content-wrap {
+    text-align: center;
+  }
+  .l-company .company-line {
+    border-bottom: 2px solid #00a7ff;
+  }
+  .footer-contact {
+    padding: 50px 0;
+  }
+  .footer-main .footer-info address {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  ._sp {
+    display: block;
+  }
+  ._pc {
+    display: none;
+  }
+  .content-wrap {
+    width: 100%;
+    padding: 0 25px;
+  }
+  .main-nav ul a {
+    font-size: 16px !important;
+  }
+  .l-header .logo a span {
+    font-size: 19px;
+  }
+  .l-header .logo a {
+    font-size: 15px;
+  }
+  .l-header {
+    height: 84px;
+    padding: 20px 25px;
+  }
+  .hero-swiper-container .swiper-wrapper {
+    height: 400px;
+  }
+  .contact-btn {
+    width: 90px;
+    height: 90px;
+    padding-top: 17px;
+    bottom: 30px;
+  }
+  .contact-btn div:first-child {
+    margin-top: 0;
+    font-size: 10px;
+  }
+  .contact-btn div:nth-child(2) {
+    font-size: 12px;
+    margin-top: 7px;
+  }
+  .contact-btn div:nth-child(3) img {
+    width: 35px;
+    margin-top: 5px;
+  }
+  .contact-btn div:last-child {
+    margin-top: 10.9px;
+  }
+  .l-hero h1 {
+    font-size: 40px;
+    line-height: 70px;
+    bottom: 78px;
+    left: 25px;
+    width: 100%;
+  }
+  .l-hero {
+    height: calc(100vh - 84px);
+    margin: 0;
+  }
+  .l-hero .swiper-pagination {
+    bottom: 20px !important;
+    top: inherit;
+  }
+  .l-company p {
+    font-size: 14px;
+    margin-top: 65px;
+    line-height: 40px;
+    letter-spacing: -.06em;
+  }
+  .l-company h1 {
+    font-size: 26px;
+    margin-bottom: 20px;
+  }
+  .l-company {
+    padding-top: 110px;
+    padding-bottom: 110px;
+    background-image: url(../image/company_back_sp.png);
+    background-size: cover;
+    background-position: left top;
+  }
+  .l-company .company-ttl-img {
+    display: none;
+  }
+  .l-company .company-btn {
+    display: none;
+  }
+  .space-sp {
+    width: 100%;
+    display: block;
+    height: 32 px;
+  }
+  .l-business {
+    padding-top: 55px;
+  }
+  .text-swiper-container {
+    width: 336px;
+    height: 254px;
+  }
+  .business-swiper-container {
+    width: 100%;
+    height: 407px;
+  }
+  .business-swiper-container .swiper-button-prev-business {
+    top: 306px;
+  }
+  .business-swiper-container .swiper-button-prev-business, .business-swiper-container .swiper-button-next-business {
+    width: 176px;
+    height: 58px;
+    font-size: 16px;
+    right: 25px;
+  }
+  .business-swiper-container .swiper-button-next:after, .business-swiper-container .swiper-button-prev:after {
+    font-size: 16px;
+    z-index: 3;
+  }
+  .business-swiper-container .swiper-button-next-business {
+    top: 248px;
+  }
+  .company-sub-back {
+    position: absolute;
+    width: 100%;
+    height: 212px;
+    background-color: rgba(0, 167, 255, 0.7);
+    color: white;
+    font-size: 24px;
+    padding: 60px 30px;
+    bottom: 188px;
+  }
+  .footer-contact .content-wrap {
+    margin: 0 25px;
+    width: calc(100% - 50px);
+  }
+  .footer-contact-ttl h1 {
+    font-size: 24px;
+  }
+  .footer-contact-ttl div {
+    width: 48px;
+    margin-top: 27px;
+    margin-bottom: 48px;
+  }
+  .footer-contact-ttl p {
+    font-size: 13px;
+    line-height: 25px;
+  }
+  .footer-contact-info h1 span {
+    font-size: 32px;
+  }
+  .footer-contact-info h1 {
+    font-size: 15px;
+  }
+  .footer-contact-info a {
+    width: 271px;
+    height: 59px;
+    font-size: 17px;
+    padding-top: 16px;
+    margin-top: 38px;
+  }
+  .footer-contact-ttl {
+    padding: 70px 0;
+  }
+  .footer-main .footer-menu nav ul li a {
+    font-size: 12px;
+  }
+  .footer-main .footer-info h1 span {
+    font-size: 24px;
+    margin-left: 15px;
+  }
+  .footer-main .footer-info h1 {
+    font-size: 19px;
+  }
+  .footer-main .footer-info address {
+    font-size: 12px;
+    line-height: 30px;
+  }
+  .footer-bottom .content-wrap {
+    font-size: 12px;
+    height: 64px;
+    padding: 25px 0;
+  }
+  .footer-main .footer-menu nav ul li a img {
+    top: 4px;
+  }
+  .swiper-pagination-text .swiper-pagination-bullet {
+    width: 49px;
+  }
+}
+
+@media (max-width: 400px) {
+  .text-swiper-container {
+    margin-left: calc(100% - 361px) !important;
+  }
+  .swiper-pagination-text {
+    margin-left: 130px !important;
+  }
+}
+
+.footer-contact-info h1 span {
+  font-size: 24px;
+}
+
+@media (max-width: 767px) {
+  .md\:block {
+    display: block;
+  }
+  .md\:hidden {
+    display: none;
+  }
+}
+
+#splash {
+  /*fixedで全面に固定*/
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background: #00A7FF;
+  text-align: center;
+  color: #fff;
+}
+
+/* Loadingバー中央配置　*/
+
+#splash_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 9999;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+/*IE11対策用バーの線の高さ※対応しなければ削除してください*/
+
+#splash_text svg {
+  height: 2px;
+}
+
+header {
+  top: 0;
+  z-index: 9998;
+  background-color: white;
+  position: sticky;
+  position: -webkit-sticky;
+  transition: .2s ease;
+}
+
+
+.contact-btn {
+  opacity: 0;
+  transition: .4s ease;
+}
+
+#ico_mail_blue {
+  display: none;
+}
+
+.swiper-button-prev-business:hover, .swiper-button-next-business:hover {
+  color: #00A7FF;
+}
+
+.l-info a:hover span {
+  color: white !important;
+}
+
+#info_arrow_white {
+  display: none;
+}
+
+.contact-btn {
+  overflow: hidden;
+  border: 1px solid #00a7ff;
+}
+
+.contact-btn:hover {
+  border: 1px solid #00a7ff;
+}
+
+.contact-btn::before {
+  content: '';
+  /*絶対配置で位置を指定*/
+  position: absolute;
+  top: 0;
+  left: -250%;
+  /*色や形状*/
+  background: #fff;
+  width: 200%;
+  height: 100%;
+  transform: skewX(-25deg);
+}
+
+.contact-btn:hover::before {
+  -webkit-animation: skewanime1 .5s forwards;
+  animation: skewanime1 .5s forwards;
+  /*アニメーションの名前と速度を定義*/
+}
+
+.contact-btn:hover>div {
+  color: #00A7FF !important;
+  z-index: 9999;
+  position: relative;
+}
+
+@keyframes skewanime1 {
+  100% {
+    left: -40%;
+  }
+}
+
+#contact_arrow_blue {
+  display: none;
+}
+
+.main-main, footer {
+  background-color: white;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-cover {
+  position: relative;
+  height: 845px;
+}
+
+.header-small {
+  padding: 20px 62rem 20px 92rem;
+}

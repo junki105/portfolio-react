@@ -1,0 +1,1481 @@
+/*
+Theme Name: hattorigumi
+Author: 
+Version: 1.0
+ */
+
+/*! tailwindcss v2.2.7 | MIT License | https://tailwindcss.com */
+
+/*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+
+/*
+Document
+========
+*/
+
+/**
+Use a better box model (opinionated).
+*/
+
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Shippori+Mincho+B1:wght@400;500;600;700;800&display=swap');
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+/**
+Use a more readable tab size (opinionated).
+*/
+
+html {
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+}
+
+/**
+1. Correct the line height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+*/
+
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+  /* 2 */
+}
+
+/*
+Sections
+========
+*/
+
+/**
+Remove the margin in all browsers.
+*/
+
+body {
+  margin: 0;
+}
+
+/**
+Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+*/
+
+body {
+  font-family: system-ui, -apple-system, /* Firefox supports this but not yet `system-ui` */
+  'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+}
+
+/*
+Grouping content
+================
+*/
+
+/**
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+*/
+
+hr {
+  height: 0;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+}
+
+/*
+Text-level semantics
+====================
+*/
+
+/**
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+abbr[title] {
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+}
+
+/**
+Add the correct font weight in Edge and Safari.
+*/
+
+b, strong {
+  font-weight: bolder;
+}
+
+/**
+1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
+2. Correct the odd 'em' font sizing in all browsers.
+*/
+
+code, kbd, samp, pre {
+  font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+Add the correct font size in all browsers.
+*/
+
+small {
+  font-size: 80%;
+}
+
+/**
+Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
+*/
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/*
+Tabular data
+============
+*/
+
+/**
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+*/
+
+table {
+  text-indent: 0;
+  /* 1 */
+  border-color: inherit;
+  /* 2 */
+}
+
+/*
+Forms
+=====
+*/
+
+/**
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+*/
+
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+Remove the inheritance of text transform in Edge and Firefox.
+1. Remove the inheritance of text transform in Firefox.
+*/
+
+button, select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+Correct the inability to style clickable types in iOS and Safari.
+*/
+
+button, [type='button'], [type='reset'], [type='submit'] {
+  -webkit-appearance: button;
+}
+
+/**
+Remove the inner border and padding in Firefox.
+*/
+
+::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+Restore the focus styles unset by the previous rule.
+*/
+
+:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+Remove the additional ':invalid' styles in Firefox.
+See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
+*/
+
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+/**
+Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+*/
+
+legend {
+  padding: 0;
+}
+
+/**
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+progress {
+  vertical-align: baseline;
+}
+
+/**
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+[type='search'] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to 'inherit' in Safari.
+*/
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/*
+Interactive
+===========
+*/
+
+/*
+Add the correct display in Chrome and Safari.
+*/
+
+summary {
+  display: list-item;
+}
+
+/**
+ * Manually forked from SUIT CSS Base: https://github.com/suitcss/base
+ * A thin layer on top of normalize.css that provides a starting point more
+ * suitable for web applications.
+ */
+
+/**
+ * Removes the default spacing and border for appropriate elements.
+ */
+
+blockquote, dl, dd, h1, h2, h3, h4, h5, h6, hr, figure, p, pre {
+  margin: 0;
+}
+
+button {
+  background-color: transparent;
+  background-image: none;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Tailwind custom reset styles
+ */
+
+/**
+ * 1. Use the user's configured `sans` font-family (with Tailwind's default
+ *    sans-serif font stack as a fallback) as a sane default.
+ * 2. Use Tailwind's default "normal" line-height so the user isn't forced
+ *    to override it to ensure consistency even when using the default theme.
+ */
+
+html {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* 1 */
+  line-height: 1.5;
+  /* 2 */
+}
+
+/**
+ * Inherit font-family and line-height from `html` so users can set them as
+ * a class directly on the `html` element.
+ */
+
+body {
+  font-family: inherit;
+  line-height: inherit;
+}
+
+/**
+ * 1. Prevent padding and border from affecting element width.
+ *
+ *    We used to set this in the html element and inherit from
+ *    the parent element for everything else. This caused issues
+ *    in shadow-dom-enhanced elements like <details> where the content
+ *    is wrapped by a div with box-sizing set to `content-box`.
+ *
+ *    https://github.com/mozdevs/cssremedy/issues/4
+ *
+ *
+ * 2. Allow adding a border to an element by just adding a border-width.
+ *
+ *    By default, the way the browser specifies that an element should have no
+ *    border is by setting it's border-style to `none` in the user-agent
+ *    stylesheet.
+ *
+ *    In order to easily add borders to elements by just setting the `border-width`
+ *    property, we change the default border-style for all elements to `solid`, and
+ *    use border-width to hide them instead. This way our `border` utilities only
+ *    need to set the `border-width` property instead of the entire `border`
+ *    shorthand, making our border utilities much more straightforward to compose.
+ *
+ *    https://github.com/tailwindcss/tailwindcss/pull/116
+ */
+
+*, ::before, ::after {
+  box-sizing: border-box;
+  /* 1 */
+  border-width: 0;
+  /* 2 */
+  border-style: solid;
+  /* 2 */
+  border-color: currentColor;
+  /* 2 */
+}
+
+/*
+ * Ensure horizontal rules are visible by default
+ */
+
+hr {
+  border-top-width: 1px;
+}
+
+/**
+ * Undo the `border-style: none` reset that Normalize applies to images so that
+ * our `border-{width}` utilities have the expected effect.
+ *
+ * The Normalize reset is unnecessary for us since we default the border-width
+ * to 0 on all elements.
+ *
+ * https://github.com/tailwindcss/tailwindcss/issues/362
+ */
+
+img {
+  border-style: solid;
+}
+
+textarea {
+  resize: vertical;
+}
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+input::placeholder, textarea::placeholder {
+  opacity: 1;
+  color: #9ca3af;
+}
+
+button, [role="button"] {
+  cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/**
+ * Reset links to optimize for opt-in styling instead of
+ * opt-out.
+ */
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/**
+ * Reset form element properties that are easy to forget to
+ * style explicitly so you don't inadvertently introduce
+ * styles that deviate from your design system. These styles
+ * supplement a partial reset that is already applied by
+ * normalize.css.
+ */
+
+button, input, optgroup, select, textarea {
+  padding: 0;
+  line-height: inherit;
+  color: inherit;
+}
+
+/**
+ * Use the configured 'mono' font family for elements that
+ * are expected to be rendered with a monospace font, falling
+ * back to the system monospace stack if there is no configured
+ * 'mono' font family.
+ */
+
+pre, code, kbd, samp {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+/**
+ * 1. Make replaced elements `display: block` by default as that's
+ *    the behavior you want almost all of the time. Inspired by
+ *    CSS Remedy, with `svg` added as well.
+ *
+ *    https://github.com/mozdevs/cssremedy/issues/14
+ * 
+ * 2. Add `vertical-align: middle` to align replaced elements more
+ *    sensibly by default when overriding `display` by adding a
+ *    utility like `inline`.
+ *
+ *    This can trigger a poorly considered linting error in some
+ *    tools but is included by design.
+ * 
+ *    https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210
+ */
+
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: block;
+  /* 1 */
+  vertical-align: middle;
+  /* 2 */
+}
+
+/**
+ * Constrain images and videos to the parent width and preserve
+ * their intrinsic aspect ratio.
+ *
+ * https://github.com/mozdevs/cssremedy/issues/14
+ */
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+ * Ensure the default browser behavior of the `hidden` attribute.
+ */
+
+[hidden] {
+  display: none;
+}
+
+*, ::before, ::after {
+  --tw-border-opacity: 1;
+  border-color: rgba(229, 231, 235, var(--tw-border-opacity));
+}
+
+.container {
+  width: 100%;
+}
+
+@font-face {
+  font-family: 'hiragino-w4';
+  src: url('../fonts/HiraginoSansW4.otf');
+}
+
+@font-face {
+  font-family: 'slabo27px-regular';
+  src: url('../fonts/Slabo27px-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Noto-Serif-Myanmar';
+  src: url('../fonts/NotoSerifMyanmar-Regular.otf');
+}
+
+.fixed {
+  position: fixed;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.z-50 {
+  z-index: 50;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.block {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.flex {
+  display: flex;
+}
+
+.grid {
+  display: grid;
+}
+
+.hidden {
+  display: none;
+}
+
+.w-1\/2 {
+  width: 50%;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-solid {
+  border-style: solid;
+}
+
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgba(255, 255, 255, var(--tw-border-opacity));
+}
+
+.bg-blue {
+  --tw-bg-opacity: 1;
+  background-color: rgba(0, 167, 255, var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.font-myanmar-regular {
+  /* font-family: myanmar-regular; */
+  font-family: 'Shippori Mincho B1', serif;
+}
+
+.font-hiragino-w4 {
+  font-family: hiragino-w4;
+}
+
+.not-italic {
+  font-style: normal;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+}
+
+.text-blue {
+  --tw-text-opacity: 1;
+  color: rgba(0, 167, 255, var(--tw-text-opacity));
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.outline-none {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+html {
+  font-size: calc(100vw / 1440);
+}
+
+body {
+  font-size: 16rem;
+}
+
+/* .content-wrap {
+  width: 1200px;
+  margin: auto;
+} */
+.content-wrap {
+  width: 1000px;
+  margin: auto;
+}
+.bgskew {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #00a7ff;
+}
+
+.bgskew:hover {
+  border: 1px solid #00a7ff !important;
+}
+
+.bgskew span {
+  z-index: 3;
+  position: relative;
+}
+
+.bgskew::before {
+  content: '';
+  /*絶対配置で位置を指定*/
+  position: absolute;
+  top: 0;
+  left: -130%;
+  /*色や形状*/
+  background: #fff;
+  width: 120%;
+  height: 100%;
+  transform: skewX(-25deg);
+}
+
+.l-info .bgskew::before {
+  background-color: #00A7FF;
+}
+
+.l-info .bgskew:hover {
+  border: 1px solid white !important;
+}
+
+/*hoverした時のアニメーション*/
+
+.bgskew:hover::before {
+  -webkit-animation: skewanime .5s forwards;
+  animation: skewanime .5s forwards;
+  /*アニメーションの名前と速度を定義*/
+}
+
+@-webkit-keyframes skewanime {
+  100% {
+    left: -10%;
+    /*画面の見えていない左から右へ移動する終了地点*/
+  }
+}
+
+@keyframes skewanime {
+  100% {
+    left: -10%;
+    /*画面の見えていない左から右へ移動する終了地点*/
+  }
+}
+
+/* header begin */
+
+.l-header {
+  padding: 53px 62rem 38px 92rem;
+}
+.header-small {
+  padding: 20px 62rem 20px 92rem;
+}
+
+.l-header .logo a {
+  font-size: 22px;
+  line-height: 60px;
+}
+
+.l-header .logo a span {
+  font-size: 27px;
+  margin-left: 15px;
+}
+
+.l-header .nav-pc ul li {
+  padding: 13px 28px;
+}
+
+.l-header .nav-pc ul li a {
+  display: block;
+  font-size: 15px;
+  position: relative;
+  padding: 7px 4px;
+}
+
+.l-header .nav-pc ul li a::after {
+  content: '';
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: black;
+  /*アニメーションの指定*/
+  transition: transform 0.25s cubic-bezier(0.65, 0, 0.35, 1);
+  transform: scale(0, 1);
+  /*X方向0、Y方向1*/
+  transform-origin: right;
+  transform-origin: center top;
+  /*上部中央基点*/
+}
+
+.l-header .nav-pc ul li a:hover::after {
+  transform: scale(1, 1);
+  /*X方向にスケール拡大*/
+}
+
+.l-header .nav-pc .header-mail-btn {
+  width: 188px;
+  height: 60px;
+  font-size: 15px;
+  margin-left: 28px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.l-header .nav-pc .header-mail-btn img {
+  width: 21px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-right: 15.4px;
+  position: relative;
+  z-index: 3;
+}
+
+.header-mail-btn:hover {
+  color: #00a7ff;
+}
+
+@media (max-width: 1023px) {
+  .l-header {
+    padding: 33px 42rem 28px 52rem;
+  }
+  .header-small {
+    padding: 20px 42rem 20px 52rem;
+  }
+  .l-header .logo a {
+    font-size: 18px;
+    line-height: 60px;
+  }
+  .l-header .logo a span {
+    font-size: 23px;
+    margin-left: 12px;
+  }
+  .l-header .nav-pc ul li {
+    padding: 16px 16px;
+  }
+  .l-header .nav-pc ul li a {
+    font-size: 13px;
+    padding: 5px 3px;
+  }
+  .l-header .nav-pc .header-mail-btn {
+    width: 168px;
+    font-size: 13px;
+    margin-left: 20px;
+  }
+  .l-header .nav-pc .header-mail-btn img {
+    width: 16px;
+    margin-right: 15.4px;
+  }
+  .menu-burger {
+    display: none !important;
+    z-index: 100;
+  }
+  .main-nav.is-open .menu-burger {
+    display: block !important;
+  }
+
+  /* Main menu positionning */
+  .main-nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    background: #FFF;
+    opacity: 0;
+    z-index: -1;
+    visibility: hidden;
+    transition: all .375s;
+  }
+  .main-nav.is-open {
+    opacity: 1;
+    z-index: 100;
+    background-color: rgba(44, 173, 246, 1);
+    visibility: visible;
+    position: fixed;
+  }
+  .main-nav .logo {
+    text-align: left;
+    padding-left: 25px;
+  }
+  .menu-btn {
+    width: 251px;
+    height: 76px;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: #2BACFC !important;
+    background-color: white;
+    margin-top: 35px;
+  }
+  .menu-btn span {
+    font-size: 0.6em;
+    color: black;
+    opacity: 1 !important;
+    margin: 0 20px 0 0;
+  }
+  .main-nav ul li:nth-child(6) {
+    margin-top: 70rem !important;
+  }
+  .main-nav .menu-btn>img {
+    width: 21px;
+    height: auto;
+    margin-right: 25px;
+  }
+  /* Yellow band effect */
+  /* Skewing effect on menu links */
+  .main-nav ul {
+    display: inline-flex;
+    flex-direction: column;
+    height: 95%;
+    /* Should be 100%, but we have a notice message :D */
+    align-items: flex-start;
+    justify-content: center;
+  }
+  .main-nav li {
+    display: block;
+    margin: .5rem 0;
+    text-align: right;
+  }
+  /* Apparition effect on links */
+  .main-nav a {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  .main-nav.is-open a {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .main-nav li:nth-child(1) a {
+    transition: all 275ms 175ms
+  }
+  .main-nav li:nth-child(2) a {
+    transition: all 275ms 225ms
+  }
+  .main-nav li:nth-child(3) a {
+    transition: all 275ms 275ms
+  }
+  .main-nav li:nth-child(4) a {
+    transition: all 275ms 325ms
+  }
+  .main-nav li:nth-child(5) a {
+    transition: all 275ms 375ms
+  }
+  .main-nav li:nth-child(6) a {
+    transition: all 275ms 425ms
+  }
+  .main-nav li:nth-child(7) a {
+    transition: all 275ms 475ms
+  }
+  /* Decoration */
+  .main-nav ul, .main-nav li {
+    list-style: none;
+    padding: 0;
+  }
+  .main-nav ul a {
+    display: block;
+    padding: 19px 0;
+    color: white;
+    font-size: 20px!important;
+    text-decoration: none;
+  }
+  .main-nav ul a span {
+    opacity: 0.43;
+    display: inline-block;
+    margin-left: 20px;
+  }
+  .main-nav .logo {
+    color: white;
+    line-height: 1;
+    margin-top: 25px;
+  }
+  /* Burger Style: @see: https://codepen.io/CreativeJuiz/full/oMZNXy */
+  .open-main-nav {
+    position: absolute;
+    top: 25px;
+    padding-top: 20px;
+    right: 25px;
+    z-index: 1000;
+    background: none;
+    border: 0;
+    cursor: pointer;
+  }
+  .open-main-nav:focus {
+    outline: none;
+  }
+  .burger {
+    position: relative;
+    display: block;
+    width: 26px;
+    height: 1px;
+    margin: 0 auto;
+    background: black;
+    transition: all 0.375s;
+  }
+  .burger:before {
+    content: '';
+    display: block;
+    width: 38px;
+    height: 100%;
+    background: black;
+  }
+  .burger:before {
+    transform: translate(-10px, -10px);
+  }
+  /* Toggle State part */
+  .is-open .burger {
+    width: 50px;
+    background: white;
+    transform: translateY(-8px) rotate(-38deg);
+    transition: all 0.375s;
+  }
+  .is-open .burger:before {
+    background: white;
+    width: 50px;
+    transform: translateY(0px) rotate(75deg);
+    transition: all 0.375s;
+  }
+  /* MENU Text part */
+  .burger-text {
+    display: block;
+    font-size: 9px;
+    letter-spacing: .05em;
+    margin-top: .5em;
+    text-transform: uppercase;
+    font-weight: 500;
+    text-align: center;
+    color: black;
+  }
+  .device {
+    position: relative;
+    width: 345px;
+    height: 600px;
+    background: #FFF;
+    border: 1px solid #EEE;
+    border-radius: 3px;
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, .1);
+  }
+  .container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #eee, #ddd);
+  }
+}
+
+/* header end */
+
+/* footer begin */
+
+.footer-contact {
+  padding: 84px 0;
+  background-image: url(../image/bg_contact.png);
+  background-position: right center;
+	font-family: 'Noto Serif JP', serif;
+}
+
+.footer-contact-ttl {
+  padding: 105px 0 84px 0;
+}
+
+.footer-contact-ttl h1 {
+  font-size: 30px;
+  letter-spacing: 0.2em;
+}
+
+.footer-contact-ttl div {
+  width: 61.13px;
+  border-bottom: 3px solid #00a7ff;
+  margin-top: 34.5px;
+  margin-bottom: 62.5px;
+}
+
+.footer-contact-ttl p {
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  line-height: 40px;
+}
+
+.footer-contact-info {
+  padding: 96px 65px 0 0;
+}
+
+.footer-contact-info h1 {
+  font-size: 20px;
+}
+
+.footer-contact-info h1 span {
+  font-size: 45px;
+  margin-left: 10px;
+  letter-spacing: 0.1em;
+}
+
+.footer-contact-info h2 {
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  margin-top: 14px;
+}
+
+.footer-contact-info a {
+  width: 310px;
+  height: 68px;
+  padding-top: 20px;
+  margin-top: 47px;
+  font-size: 20px;
+  letter-spacing: 0.1em;
+  border: 1px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-contact-info a:hover {
+  color: #00a7ff !important;
+}
+
+.footer-contact-info a span {
+  z-index: 3;
+  position: relative;
+}
+
+.footer-main {
+  background-color: #006EA8;
+  padding: 105px 0 87px 0;
+}
+
+.footer-main .footer-info h1 {
+  font-size: 22px;
+  letter-spacing: 0.05em;
+}
+
+.footer-main .footer-info h1 span {
+  font-size: 27px;
+}
+
+.footer-main .footer-info address {
+  font-size: 14px;
+  letter-spacing: 0.2em;
+  line-height: 35px;
+  margin-top: 50px;
+}
+
+.footer-main .footer-menu {
+  padding: 107px 42px 0px 0px;
+}
+
+.footer-main .footer-menu nav ul {
+  grid-template-columns: auto auto auto;
+}
+
+.footer-main .footer-menu nav ul li {
+  position: relative;
+  margin-top: 10px;
+}
+
+.footer-main .footer-menu nav ul li a {
+  font-size: 15px;
+  padding-left: 19.5px;
+}
+
+.footer-main .footer-menu nav ul li a img {
+  position: absolute;
+  top: 9px;
+}
+
+.footer-bottom .content-wrap {
+  font-size: 14px;
+  padding: 33px 41px;
+}
+
+.contact-btn {
+  width: 115px;
+  height: 115px;
+  right: 60px;
+  bottom: 20px;
+  padding-top: 20px;
+}
+
+.contact-btn div:first-child {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  font-style: italic;
+}
+
+.contact-btn div:nth-child(2) {
+  font-size: 15px;
+  letter-spacing: 0.1em;
+  margin-top: 10px;
+}
+
+.contact-btn div:last-child {
+  margin-top: 12px;
+}
+.contact-btn div:last-child img {
+  width: 38px;
+}
+
+/* footer end */
+
+.company-sub-back {
+  position: absolute;
+  width: 100%;
+  height: 223px;
+  background-color: rgba(0, 167, 255, 0.7);
+  color: white;
+  font-size: 30px;
+  padding: 90px 0;
+  bottom: 135px;
+  z-index: 2;
+  font-family: 'Shippori Mincho B1';
+}
+
+.l-work article img {
+  width: 9rem;
+}
+
+._sp {
+  display: none;
+}
+
+.footer-main .footer-info h1 span {
+  margin-left: 15px;
+}
+
+@media (max-width: 1300px) {
+  .content-wrap {
+    width: 85%;
+}
+  .footer-contact-info {
+    padding: 96px 45px 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: calc(100vw / 768);
+  }
+  .footer-contact>div {
+    flex-direction: column;
+  }
+  .w-1\/2 {
+    width: 100%;
+  }
+  .footer-contact-info {
+    padding: 0 0 86px 0;
+  }
+  .footer-main {
+    padding: 83px 25px 64px 25px;
+  }
+  .footer-main>div {
+    flex-direction: column-reverse;
+  }
+  .footer-main .footer-menu {
+    padding: 0;
+  }
+  .footer-line._sp {
+    height: 1px;
+    background-color: #879CC9;
+    width: 100%;
+    margin: 65px 0 35px 0;
+    display: block;
+  }
+  .footer-main .footer-menu nav ul li {
+    margin-top: 20px;
+    font-size: 12px;
+  }
+  .footer-bottom .content-wrap {
+    text-align: center;
+  }
+  .l-company .company-line {
+    border-bottom: 2px solid #00a7ff;
+  }
+  .footer-contact {
+    padding: 50px 0;
+  }
+  .footer-main .footer-info address {
+    margin-top: 15px;
+  }
+}
+
+@media (max-width: 500px) {
+  ._sp {
+    display: block;
+  }
+  ._pc {
+    display: none;
+  }
+  .content-wrap {
+    width: 100%;
+    padding: 0 25px;
+  }
+  .main-nav ul a {
+    font-size: 16px !important;
+  }
+  .l-header .logo a span {
+    font-size: 19px;
+  }
+  .l-header .logo a {
+    font-size: 15px;
+    line-height: 1;
+  }
+  .l-header {
+    height: 84px;
+    padding: 20px 25px;
+  }
+  .hero-swiper-container .swiper-wrapper {
+    height: 400px;
+  }
+  .footer-contact .content-wrap {
+    margin: 0 25px;
+    width: calc(100% - 50px);
+  }
+  .footer-contact-ttl h1 {
+    font-size: 24px;
+  }
+  .footer-contact-ttl div {
+    width: 48px;
+    margin-top: 27px;
+    margin-bottom: 48px;
+  }
+  .footer-contact-ttl p {
+    font-size: 13px;
+    line-height: 25px;
+  }
+  .footer-contact-info h1 span {
+    font-size: 32px;
+  }
+  .footer-contact-info h1 {
+    font-size: 15px;
+  }
+  .footer-contact-info a {
+    width: 271px;
+    height: 59px;
+    font-size: 17px;
+    padding-top: 16px;
+    margin-top: 38px;
+  }
+  .footer-contact-ttl {
+    padding: 70px 0;
+  }
+  .footer-main .footer-menu nav ul li a {
+    font-size: 12px;
+  }
+  .footer-main .footer-info h1 span {
+    font-size: 24px;
+    margin-left: 15px;
+  }
+  .footer-main .footer-info h1 {
+    font-size: 19px;
+  }
+  .footer-main .footer-info address {
+    font-size: 12px;
+    line-height: 30px;
+  }
+  .footer-bottom .content-wrap {
+    font-size: 12px;
+    height: 64px;
+    padding: 25px 0;
+  }
+  .footer-main .footer-menu nav ul li a img {
+    top: 4px;
+  }
+}
+
+@media (max-width: 400px) {
+  .text-swiper-container {
+    margin-left: calc(100% - 361px) !important;
+  }
+  .swiper-pagination-text {
+    margin-left: 130px !important;
+  }
+}
+
+.footer-contact-info h1 span a {
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .md\:block {
+    display: block;
+  }
+  .md\:hidden {
+    display: none;
+  }
+}
+
+#splash {
+  /*fixedで全面に固定*/
+  position: fixed;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background: #00A7FF;
+  text-align: center;
+  color: #fff;
+}
+
+/* Loadingバー中央配置　*/
+
+#splash_text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 9999;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+/*IE11対策用バーの線の高さ※対応しなければ削除してください*/
+
+#splash_text svg {
+  height: 2px;
+}
+
+header {
+  top: 0;
+  z-index: 9998;
+  background-color: white;
+  position: sticky;
+  position: -webkit-sticky;
+  transition: .2s ease;
+}
+
+
+
+@media (max-width: 768px) {
+  .l-header {
+    padding: 30px 25px;
+  }
+}
+.main-main, footer {
+  background-color: white;
+  position: relative;
+  z-index: 2;
+}
+
+#ico_mail_blue {
+  display: none;
+}
